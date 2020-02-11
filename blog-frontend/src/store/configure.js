@@ -5,7 +5,7 @@ import * as modules from './modules';
 const reducers = combineReducers(modules);
 const middlewares = [penderMiddleware()];
 
-// 개발 모드일 때만 Redux Devtools를 적용합니다.
+// 개발 모드일 때만 Redux Devtools를 적용합니다.(개발자 도구의 Redux 툴)
 const isDev = process.env.NODE_ENV === 'development';
 const devtools = isDev && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 const composeEnhancers = devtools || compose;

@@ -22,6 +22,16 @@
     .code-editor {
         flex: 1; // 남는 영역 다 차지
         background: $oc-gray-9; 
+        display: flex;
+        flex-direction: column;  // .CodeMirror가 세로 영역을 전부 차지
+        
+        // 그냥 .CodeMirror라고 하면 CSS Module을 적용하여 고유 id를 가진 클래스 이름을 생성합니다.
+        // 앞부분에 :global 키워드를 붙여주면 해당 클래스에서는 CSS Module을 적용하지 않습니다.
+        :global .CodeMirror {
+            font-size: 1rem;
+            flex: 1;
+            font-family: 'D2 Coding';
+        }
     }
 
     .tags {
